@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ashwin | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="logo">Ashwin.</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#certifications">Certs</a></li>
+      <li><a href="#achievements">Achievements</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">&#9776;</button>
+  </nav>
+
+  <!-- HOME -->
+  <section id="home">
+    <div class="home-content">
+      <img src="assets/profile.jpg" alt="Profile Photo" class="profile-photo" onerror="this.src='https://ui-avatars.com/api/?name=Ashwin&size=160&background=6c63ff&color=fff&rounded=true'" />
+      <h1>Hi, I'm <span>Ashwin</span></h1>
+      <p class="tagline">Full Stack Developer &amp; AI/ML Enthusiast</p>
+      <div class="social-links">
+        <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:ashwin@email.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+      </div>
+      <a href="#about" class="btn">Learn More</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2 class="section-title">About Me</h2>
+    <div class="about-grid">
+      <div class="about-card">
+        <i class="fas fa-user-circle"></i>
+        <h3>Introduction</h3>
+        <p>I'm a passionate developer who loves building scalable web apps and exploring AI/ML. I enjoy solving real-world problems through clean, efficient code.</p>
+      </div>
+      <div class="about-card">
+        <i class="fas fa-bullseye"></i>
+        <h3>Career Objective</h3>
+        <p>To contribute to impactful projects in a growth-driven environment, leveraging my skills in full-stack development and machine learning to drive innovation.</p>
+      </div>
+      <div class="about-card">
+        <i class="fas fa-heart"></i>
+        <h3>Interests</h3>
+        <p>Open source contribution, competitive programming, data science, building side projects, and reading about emerging tech trends.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <h2 class="section-title">Education</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>B.Tech in Computer Science</h3>
+          <h4>Your College Name</h4>
+          <span class="badge">2021 – 2025</span>
+          <p>CGPA: 8.5 / 10 &nbsp;|&nbsp; Relevant: Data Structures, ML, Web Dev, DBMS, OS</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>Higher Secondary (12th)</h3>
+          <h4>Your School Name</h4>
+          <span class="badge">2019 – 2021</span>
+          <p>Percentage: 92% &nbsp;|&nbsp; Stream: Science (PCM + CS)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-category">
+        <h3><i class="fas fa-code"></i> Programming Languages</h3>
+        <div class="tags">
+          <span>Python</span><span>JavaScript</span><span>Java</span><span>C++</span><span>SQL</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <h3><i class="fas fa-globe"></i> Web Development</h3>
+        <div class="tags">
+          <span>HTML/CSS</span><span>React</span><span>Node.js</span><span>Express</span><span>MongoDB</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <h3><i class="fas fa-chart-bar"></i> Data Science</h3>
+        <div class="tags">
+          <span>Pandas</span><span>NumPy</span><span>Matplotlib</span><span>Seaborn</span><span>Scikit-learn</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <h3><i class="fas fa-brain"></i> AI / ML</h3>
+        <div class="tags">
+          <span>TensorFlow</span><span>PyTorch</span><span>NLP</span><span>Computer Vision</span><span>LLMs</span>
+        </div>
+      </div>
+      <div class="skill-category">
+        <h3><i class="fas fa-tools"></i> Tools &amp; Technologies</h3>
+        <div class="tags">
+          <span>Git</span><span>Docker</span><span>AWS</span><span>Linux</span><span>Postman</span><span>VS Code</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <div class="project-header">
+          <i class="fas fa-robot"></i>
+          <h3>AI Chatbot</h3>
+        </div>
+        <p>A conversational AI chatbot built with Python and a fine-tuned LLM for domain-specific Q&A.</p>
+        <div class="tags">
+          <span>Python</span><span>LangChain</span><span>OpenAI API</span><span>FastAPI</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+          <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <i class="fas fa-store"></i>
+          <h3>E-Commerce Platform</h3>
+        </div>
+        <p>Full-stack MERN e-commerce app with authentication, cart, payment integration, and admin panel.</p>
+        <div class="tags">
+          <span>React</span><span>Node.js</span><span>MongoDB</span><span>Stripe</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+          <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <i class="fas fa-chart-line"></i>
+          <h3>Stock Price Predictor</h3>
+        </div>
+        <p>ML model using LSTM networks to predict stock prices with real-time data fetching and visualizations.</p>
+        <div class="tags">
+          <span>Python</span><span>LSTM</span><span>TensorFlow</span><span>Plotly</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+          <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <h2 class="section-title">Experience</h2>
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>ML Intern</h3>
+          <h4>Company Name &nbsp;|&nbsp; <span class="badge">Jun 2024 – Aug 2024</span></h4>
+          <p>Developed and deployed ML models for predictive analytics. Improved model accuracy by 15% through feature engineering.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>Freelance Web Developer</h3>
+          <h4>Self-employed &nbsp;|&nbsp; <span class="badge">2023 – Present</span></h4>
+          <p>Built 5+ websites for small businesses using React and Node.js. Delivered projects on time with high client satisfaction.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>Technical Lead</h3>
+          <h4>College Tech Club &nbsp;|&nbsp; <span class="badge">2022 – 2024</span></h4>
+          <p>Led a team of 12 students, organized workshops on web dev and ML, and mentored juniors on technical projects.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications">
+    <h2 class="section-title">Certifications</h2>
+    <div class="cert-grid">
+      <div class="cert-card">
+        <i class="fab fa-aws"></i>
+        <h3>AWS Cloud Practitioner</h3>
+        <p>Amazon Web Services</p>
+        <span class="badge">2024</span>
+      </div>
+      <div class="cert-card">
+        <i class="fas fa-brain"></i>
+        <h3>Machine Learning Specialization</h3>
+        <p>Coursera – Andrew Ng</p>
+        <span class="badge">2023</span>
+      </div>
+      <div class="cert-card">
+        <i class="fab fa-google"></i>
+        <h3>Google Data Analytics</h3>
+        <p>Google – Coursera</p>
+        <span class="badge">2023</span>
+      </div>
+      <div class="cert-card">
+        <i class="fab fa-react"></i>
+        <h3>Full Stack Development</h3>
+        <p>Udemy – MERN Stack</p>
+        <span class="badge">2022</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+  <section id="achievements">
+    <h2 class="section-title">Achievements</h2>
+    <div class="achieve-grid">
+      <div class="achieve-card">
+        <i class="fas fa-trophy"></i>
+        <h3>Hackathon Winner</h3>
+        <p>1st place at National Hackathon 2024 — built an AI-powered disaster response system in 24 hours.</p>
+      </div>
+      <div class="achieve-card">
+        <i class="fas fa-medal"></i>
+        <h3>Competitive Programming</h3>
+        <p>Top 5% on LeetCode (1800+ rating). Solved 500+ problems across Codeforces and HackerRank.</p>
+      </div>
+      <div class="achieve-card">
+        <i class="fas fa-star"></i>
+        <h3>Academic Excellence Award</h3>
+        <p>Awarded Best Student in CSE Department for consecutive outstanding academic performance.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESUME -->
+  <section id="resume">
+    <h2 class="section-title">Resume</h2>
+    <div class="resume-box">
+      <i class="fas fa-file-pdf"></i>
+      <p>Download my resume to learn more about my experience, skills, and accomplishments.</p>
+      <a href="assets/resume.pdf" download class="btn"><i class="fas fa-download"></i> Download Resume</a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2 class="section-title">Contact</h2>
+    <div class="contact-wrapper">
+      <div class="contact-info">
+        <a href="mailto:ashwin@email.com"><i class="fas fa-envelope"></i> ashwin@email.com</a>
+        <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i> linkedin.com/in/ashwin</a>
+        <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i> github.com/ashwin</a>
+      </div>
+      <form class="contact-form" id="contactForm">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message <i class="fas fa-paper-plane"></i></button>
+        <p class="form-status" id="formStatus"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Ashwin. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </footer>
+
+  <button id="scrollTop" title="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+  <script src="script.js"></script>
+</body>
+</html>
