@@ -8,10 +8,20 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
+  <div id="cursor"></div>
+  <div id="cursor-dot"></div>
+  <div id="scroll-progress"></div>
+
+  <div class="ocean-background">
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+    <div class="blob blob3"></div>
+    <div class="blob blob4"></div>
+  </div>
 
   <!-- NAV -->
   <nav id="navbar">
-    <div class="logo">Ashwin.</div>
+    <div class="logo">Ashwin.S</div>
     <ul class="nav-links" id="navLinks">
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
@@ -24,15 +34,19 @@
       <li><a href="#resume">Resume</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <button class="hamburger" id="hamburger" aria-label="Menu">&#9776;</button>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
 
   <!-- HOME -->
   <section id="home">
     <div class="home-content">
-      <img src="assets/profile.jpg" alt="Profile Photo" class="profile-photo" onerror="this.src='https://ui-avatars.com/api/?name=Ashwin&size=160&background=6c63ff&color=fff&rounded=true'" />
-      <h1>Hi, I'm <span>Ashwin</span></h1>
-      <p class="tagline">Full Stack Developer &amp; AI/ML Enthusiast</p>
+      <div class="profile-ring">
+        <img src="assets/profile.jpg" alt="Profile Photo" class="profile-photo" onerror="this.src='https://ui-avatars.com/api/?name=Ashwin&size=160&background=1a0a2e&color=6ee7f7&rounded=true'" />
+      </div>
+      <h1>Hi, I'm <span class="highlight" data-text="Ashwin">Ashwin</span></h1>
+      <p class="tagline"><span id="typed"></span><span class="typed-cursor">|</span></p>
       <div class="social-links">
         <a href="https://github.com/Ashwin-2008" target="_blank"><i class="fab fa-github"></i></a>
         <a href="https://linkedin.com/in/ashwin-s-a04850333/" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -41,6 +55,14 @@
       <a href="#about" class="btn">Learn More</a>
     </div>
   </section>
+
+  <!-- STATS -->
+  <div id="stats-strip">
+    <div class="stat-item"><span class="stat-num" data-target="500">0</span><p>Problems Solved</p></div>
+    <div class="stat-item"><span class="stat-num" data-target="10">0</span><p>Projects Built</p></div>
+    <div class="stat-item"><span class="stat-num" data-target="5">0</span><p>Certifications</p></div>
+    <div class="stat-item"><span class="stat-num" data-target="3">0</span><p>Hackathons Won</p></div>
+  </div>
 
   <!-- ABOUT -->
   <section id="about">
@@ -93,31 +115,35 @@
   <section id="skills">
     <h2 class="section-title">Skills</h2>
     <div class="skills-grid">
-      <div class="skill-category">
+      <div class="skill-category fade-in">
         <h3><i class="fas fa-code"></i> Programming Languages</h3>
-        <div class="tags">
-          <span>Python</span><span>JavaScript</span><span>Java</span><span>C++</span><span>SQL</span>
+        <div class="skill-bars">
+          <div class="skill-bar-item"><span>Python</span><div class="bar"><div class="bar-fill" data-width="90"></div></div></div>
+          <div class="skill-bar-item"><span>JavaScript</span><div class="bar"><div class="bar-fill" data-width="85"></div></div></div>
+          <div class="skill-bar-item"><span>Java</span><div class="bar"><div class="bar-fill" data-width="75"></div></div></div>
+          <div class="skill-bar-item"><span>C++</span><div class="bar"><div class="bar-fill" data-width="70"></div></div></div>
+          <div class="skill-bar-item"><span>SQL</span><div class="bar"><div class="bar-fill" data-width="80"></div></div></div>
         </div>
       </div>
-      <div class="skill-category">
+      <div class="skill-category fade-in">
         <h3><i class="fas fa-globe"></i> Web Development</h3>
         <div class="tags">
           <span>HTML/CSS</span><span>React</span><span>Node.js</span><span>Express</span><span>MongoDB</span>
         </div>
       </div>
-      <div class="skill-category">
+      <div class="skill-category fade-in">
         <h3><i class="fas fa-chart-bar"></i> Data Science</h3>
         <div class="tags">
           <span>Pandas</span><span>NumPy</span><span>Matplotlib</span><span>Seaborn</span><span>Scikit-learn</span>
         </div>
       </div>
-      <div class="skill-category">
+      <div class="skill-category fade-in">
         <h3><i class="fas fa-brain"></i> AI / ML</h3>
         <div class="tags">
           <span>TensorFlow</span><span>PyTorch</span><span>NLP</span><span>Computer Vision</span><span>LLMs</span>
         </div>
       </div>
-      <div class="skill-category">
+      <div class="skill-category fade-in">
         <h3><i class="fas fa-tools"></i> Tools &amp; Technologies</h3>
         <div class="tags">
           <span>Git</span><span>Docker</span><span>AWS</span><span>Linux</span><span>Postman</span><span>VS Code</span>
@@ -293,9 +319,18 @@
     <h2 class="section-title">Contact</h2>
     <div class="contact-wrapper">
       <div class="contact-info">
-        <a href="mailto:ashwinsridharan@gmail.com"><i class="fas fa-envelope"></i> ashwin@email.com</a>
-        <a href="https://linkedin.com/in/ashwin-s-a04850333/" target="_blank"><i class="fab fa-linkedin"></i> linkedin.com/in/ashwin</a>
-        <a href="https://github.com/Ashwin-2008" target="_blank"><i class="fab fa-github"></i> github.com/ashwin</a>
+        <div class="contact-card">
+          <i class="fas fa-envelope"></i>
+          <div><h4>Email</h4><a href="mailto:ashwinsridharan71@gmail.com">ashwinsridharan71@gmail.com</a></div>
+        </div>
+        <div class="contact-card">
+          <i class="fab fa-linkedin"></i>
+          <div><h4>LinkedIn</h4><a href="https://linkedin.com/in/ashwin-s-a04850333/" target="_blank">linkedin.com/in/ashwin</a></div>
+        </div>
+        <div class="contact-card">
+          <i class="fab fa-github"></i>
+          <div><h4>GitHub</h4><a href="https://github.com/Ashwin-2008" target="_blank">github.com/Ashwin-2008</a></div>
+        </div>
       </div>
       <form class="contact-form" id="contactForm">
         <input type="text" placeholder="Your Name" required />
